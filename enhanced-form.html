@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Form Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 96%;
+      padding: 8px;
+      margin-top: 4px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    table {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to the Enhanced HTML5 Page</h1>
+    <p>This page demonstrates lists, tables, media, and a fully featured HTML5 form with native validation.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Features List</h2>
+      <ul>
+        <li>Semantic HTML5 structure</li>
+        <li>Accessible and validated form</li>
+        <li>Embedded media: image, audio, and video</li>
+        <li>Organized content using tables and lists</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Steps to Complete This Page</h2>
+      <ol>
+        <li>Create a structured layout</li>
+        <li>Embed media files</li>
+        <li>Build the HTML5 form</li>
+        <li>Apply validation rules</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Course Schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Module</th>
+            <th>Topic</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>HTML Basics</td>
+            <td>2 hours</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>HTML5 Forms</td>
+            <td>3 hours</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Media and Layout</td>
+            <td>2 hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Embedded Media</h2>
+      <article>
+        <h3>Image</h3>
+        <img src="media/sample-image.jpg" alt="Sample Banner" style="max-width: 50%;" />
+      </article>
+
+      <article>
+        <h3>Audio</h3>
+        <audio controls>
+          <source src="media/sample-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+
+      <article>
+        <h3>Video</h3>
+        <video controls width="600">
+          <source src="media/sample-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </article>
+    </section>
+
+    <section>
+      <h2>Contact and Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+          
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="fname" required minlength="2" placeholder="Sam" />
+
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lname" required minlength="2" placeholder="Smith" />
+
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Setup</legend>
+
+          <label for="username">Username *</label>
+          <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,15}$" placeholder="user123" />
+
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="At least 6 characters" />
+
+          <label for="confirm">Confirm Password *</label>
+          <input type="password" id="confirm" name="confirm" required minlength="6" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="">-- Select --</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label>
+            <input type="checkbox" name="subscribe" checked />
+            Subscribe to newsletter
+          </label>
+
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Read-Only Information</legend>
+          <label for="refcode">Referral Code</label>
+          <input type="text" id="refcode" name="refcode" value="AUTO1234" readonly />
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Form Project. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
